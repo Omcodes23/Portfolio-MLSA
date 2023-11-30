@@ -1,0 +1,53 @@
+/* about.css */
+
+.about-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    filter: brightness(60%); /* Adjust the brightness as desired */
+  }
+  
+  .content-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    width: 80%;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333; /* Choose a suitable text color */
+  }
+  
+  .large-description {
+    font-size: 1.5rem;
+    color: #444; /* Choose a suitable text color */
+  }
+  
+  .skills-list {
+    list-style: none;
+    text-align: left;
+    columns: 2;
+    font-size: 1.25rem;
+    margin: 1rem 3rem;
+  }
+  
+  .skills-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .detail-quote {
+    font-size: 1.2rem;
+    margin: 1rem 3rem 0;
+    color: #666; /* Choose a suitable text color */
+  }
+  
