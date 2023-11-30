@@ -5,7 +5,7 @@
  */
 
 import React from "react";
-
+import Education from "./Components/Education";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -24,15 +24,15 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
-  medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  name: "Om Vataliya",
+  title: "Web Developer",
+  email: "omvataliya23@gmail.com",
+  gitHub: "Omcodes23",
+  instagram: "omcodes23",
+  linkedIn: "𝙾𝚖-𝚅ataliya-922267220/",
+  // medium: "Om Vataliya",
+  twitter: "@Om_codes",
+  // youTube: "Code",
 };
 
 const primaryColor = "#4E567E";
@@ -45,6 +45,7 @@ const App = () => {
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
       <Portfolio />
+      <Education />
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>
   );

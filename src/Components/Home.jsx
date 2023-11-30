@@ -76,7 +76,7 @@ const Home = ({ name }) => {
 };
 
 Home.defaultProps = {
-  name: "",
+  name: "om",
 };
 
 Home.propTypes = {
