@@ -1,80 +1,119 @@
-/**
- * Portfolio component
- *
- * Highlights some of  your creations. These can be designs, websites,
- * open source contributions, articles you've written and more.
- *
- * This is a great area for you to to continually add to and refine
- * as you continue to learn and create.
- */
+// import React from "react";
+// import "../styles.css"; // Import your global styles
+// import image from "../images/dosomthinggreate.jpg"; // Replace with your background image
+
+// const imageAltText = "desktop with books and laptop";
+
+// const projectList = [
+//   {
+//     title: "Sticky Notes",
+//     description:
+//       "This a simple sticky notes app built with Javascript. It allows you to create, edit, and delete notes.",
+//     url: "https://stickynotes-seven.vercel.app/",
+//     image: "https://i.imgur.com/5zQ3j5M.png",
+//   },
+//   {
+//     title: "Randome Joke Generator",
+//     description:
+//       "This is a simple app built with Javascript that fetches a random joke from an API and displays it.",
+//     url: "https://github.com/Omcodes23/The-100-Days-0f-code/tree/bba8962d607ddd4fd128d979d5a430d15ae2670c/31",
+//   },
+//   {
+//     title: "Esp 8266 Evil Twin",
+//     description:
+//       "This is Simple Deauthering Attack tool using ESP8266 and NodeMCU.",
+//     url: "https://www.linkedin.com/posts/omcodes23_guys-i-made-a-evil-twin-esp-8266-deauther-activity-7077236067967336448-1HuN?utm_source=share&utm_medium=member_desktop",
+//   },
+//   {
+//     title: "Horizontal Accordion",
+//     description:
+//       "This is a horizontal accordion built with HTML, CSS, and Javascript.",
+//     url: "https://horizontalaccordion.vercel.app/",
+//   }
+// ];
+
+// const Portfolio = () => {
+//   return (
+//     <section className="padding" id="portfolio">
+//       <h2 style={{ textAlign: "center", color: "whitesmoke" }}>Portfolio</h2>
+//       <div style={{ display: "flex",flexDirection:"column-reverse", paddingTop: "3rem" }}>
+//         <img className="background" src={image} alt={imageAltText} />
+//         <div className="container">
+//           {projectList.map((project) => (
+//             <div className="box" key={project.title} style={{ background: "rgba(0, 0, 0, 0.5)", backdropFilter: "blur(10px)", border: "2px solid white" }}>
+//               <a href={project.url} target="_blank" rel="noopener noreferrer">
+//                 <h3 style={{ flexBasis: "40px", color:"white" }}>{project.title}</h3>
+//               </a>
+//               <p className="small" style={{color:"white"}}>{project.description}</p>
+//               <hr/>
+//               <img src={image} alt="Sample Image" style={{ width: "100%", height: "50%", borderRadius: "0%", border:"2px solid white" }} />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Portfolio;
 
 import React from "react";
-
-/**
- * Desk image
- *
- * Below is a sample desk image. Feel free to update this to an image of your choice,
- * updating below imageAltText to string that represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
-import image from "../images/design-desk.jpeg";
+import "../styles.css"; // Import your global styles
+import image from "../images/dosomthinggreate.jpg"; // Replace with your background image
+import image1 from "../images/stickynotes.png"; // Replace with your background image
+import image2 from "../images/joke.png"; // Replace with your background image
+import image3 from "../images/esp.png"; // Replace with your background image
+import image4 from "../images/hor.png"; // Replace with your background image
 
 const imageAltText = "desktop with books and laptop";
 
-/**
- * Project list
- *
- * An array of objects that will be used to display for your project
- * links section. Below is a sample, update to reflect links you'd like to highlight.
- */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Sticky Notes",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "This a simple sticky notes app built with Javascript. It allows you to create, edit, and delete notes.",
+    url: "https://stickynotes-seven.vercel.app/",
+    image: image1, // Use the variable directly, without quotes
   },
   {
-    title: "Web Development for Beginners",
-    description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
-  },
-  {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
-  },
-  {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
-  },
+         title: "Randome Joke Generator",
+         description:
+           "This is a simple app built with Javascript that fetches a random joke from an API and displays it.",
+         url: "https://github.com/Omcodes23/The-100-Days-0f-code/tree/bba8962d607ddd4fd128d979d5a430d15ae2670c/31",
+         image : image2,
+       },
+       {
+         title: "Esp 8266 Evil Twin",
+         description:
+           "This is Simple Deauthering Attack tool using ESP8266 and NodeMCU.",
+         url: "https://www.linkedin.com/posts/omcodes23_guys-i-made-a-evil-twin-esp-8266-deauther-activity-7077236067967336448-1HuN?utm_source=share&utm_medium=member_desktop",
+         image : image3,
+       },
+       {
+         title: "Horizontal Accordion",
+         description:
+           "This is a horizontal accordion built with HTML, CSS, and Javascript.",
+         url: "https://horizontalaccordion.vercel.app/",
+         image : image4,
+       }
+  // ... other projects
 ];
 
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
-            alt={imageAltText}
-          />
-        </div>
+      <h2 style={{ textAlign: "center", color: "whitesmoke" }}>Portfolio</h2>
+      <div style={{ display: "flex",flexDirection:"column-reverse", paddingTop: "3rem" }}>
+        <img className="background" src={image} alt={imageAltText} />
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
+            <div className="box" key={project.title} style={{ background: "rgba(0, 0, 0, 0.5)", backdropFilter: "blur(10px)", border: "2px solid white" }}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                <h3 style={{ flexBasis: "40px", color:"white" }}>{project.title}</h3>
               </a>
-              <p className="small">{project.description}</p>
+              <p className="small" style={{color:"white"}}>{project.description}</p>
+              <hr/>
+              <img src={project.image} alt={project.title} style={{ width: "100%", height: "50%", borderRadius: "0%", border:"2px solid white" }} />
             </div>
           ))}
         </div>
