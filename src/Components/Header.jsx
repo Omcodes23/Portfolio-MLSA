@@ -1,21 +1,20 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
-import React from "react";
 
+import React from "react";
+import "../styles.css"; // Import your global styles
+import "../styles/header.css"
 const Header = () => {
   return (
     <div
       style={{
         position: "fixed",
         display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        overflow: "hidden",
         justifyContent: "center",
-        gap: "2rem",
+        gap: "1rem",
         background: "rgba(255,255,255,0.75)",
-        padding: "1rem",
+        padding: "0.7rem",
         top: 0,
         width: "100%",
         zIndex: 10,

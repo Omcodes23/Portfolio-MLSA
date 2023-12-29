@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useSpring, animated } from "react-spring";
 
 import image from "../images/woman-with-tablet.jpg";
+import imagejj from "../images/phonehomeimage.jpg";
 
 const imageAltText =
   "Adult female in an office setting leaning against a glass wall while holding a platinum Microsoft Surface Pro 7 in tablet mode preparing to write with a Microsoft Surface Pen";
@@ -53,7 +54,25 @@ const Home = ({ name }) => {
 
   return (
     <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
+      <img className="background" src={image} alt="" style={{ maxWidth: "100%" }} />
+      <style>
+        {`
+        @media (max-width: 768px) {
+          .background {
+            background-image: url(${imagejj});
+            
+          }
+
+          h1 {
+            font-size: 4rem; /* Adjust the font size for h1 on smaller screens */
+          }
+
+          h2 {
+            font-size: 1.5rem; /* Adjust the font size for h2 on smaller screens */
+          }
+        }
+        `}
+      </style>
       <div
         style={{
           position: "absolute",
@@ -66,10 +85,10 @@ const Home = ({ name }) => {
         <animated.h1 style={nameSpring}>{name}</animated.h1>
         <div style={{ display: "flex", alignItems: "center" }}>
           <animated.h2>{currentTitle}</animated.h2>
-          <div className="cursor" style={{fontSize:"3rem"}}>|</div>
+          <div className="cursor" style={{ fontSize: "3rem" }}>|</div>
         </div>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%", display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
       </div>
     </section>
   );

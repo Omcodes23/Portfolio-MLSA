@@ -1,4 +1,3 @@
-
 import React from "react";
 import image from "../images/key.jpg";
 
@@ -19,8 +18,6 @@ const About = () => {
     "C++",
     "HTML",
     "CSS",
-
-
   ];
 
   const detailOrQuote = `I am passionate about solving problems in new creative ways 
@@ -31,60 +28,103 @@ const About = () => {
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
       <div
-        style={{
-          width: "60%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-          boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-          fontFamily: "Arial, sans-serif",
-          background: "rgba(0, 0, 0, 0.5)", 
-          backdropFilter: "blur(15px)",
-           border: "2px solid white",
-           color:"white"
-        }}
+        className="about-container"
       >
-        <h2 style={{ fontSize: "2.5rem", color: "white", margin: "0 0 2rem" }}>
-          About Myself
-        </h2>
-        <p
-          className="large"
-          style={{ fontSize: "1.5rem", color: "whitesmoke", margin: "0 0 2rem" }}
-        >
-          {description}
-        </p>
-        <hr style={{ margin: "2rem 0" }} />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 8rem",
-            gap: "3rem",
-            // backgroundColor: "#fff",
-            borderRadius: "5px",
-            padding: "1rem",
-          }}
-        >
+        <h2>About Myself</h2>
+        <p className="large">{description}</p>
+        <hr />
+        <ul>
           {skillsList.map((skill) => (
-            <li key={skill} style={{ color: "whitesmoke" }}>
-              {skill}
-            </li>
+            <li key={skill}>{skill}</li>
           ))}
         </ul>
-        <hr style={{ margin: "2rem 0" }} />
-        <p
-          style={{
-            fontSize: "1.5rem",
-            color: "whitesmoke",
-            margin: "0 3rem 1rem",
-            padding: "1rem",
-            
-          }}
-        >
-          {detailOrQuote}
-        </p>
+        <hr />
+        <p>{detailOrQuote}</p>
       </div>
+
+      {/* Media Query for Responsive Styling on Mobile Devices */}
+      <style>
+        {`
+          .about-container {
+            width: 40%;
+            padding: 4rem;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border: 2px solid white;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            justify-content: center;
+          }
+
+          h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin: 0 0 2rem;
+          }
+
+          p.large {
+            font-size: 1.5rem;
+            color: whitesmoke;
+          }
+
+          ul {
+            columns: 2;
+            font-size: 1.25rem;
+            margin: 0;
+            gap: 3rem;
+            padding: 2rem;
+            border-radius: 5px;
+            padding: 1rem;
+            list-style: none;
+          }
+
+          hr {
+            margin: 2rem 0;
+          }
+
+          li {
+            color: whitesmoke;
+          }
+
+          /* Media Query for Responsive Styling on Mobile Devices */
+          @media (max-width: 768px) {
+            .about-container {
+              width: 70%;
+              padding: 2rem;
+              font-size: 1.2rem;
+            }
+
+            h2 {
+              font-size: 2rem;
+            }
+
+            p.large {
+              font-size: 1.2rem;
+            }
+
+            ul {
+              columns: 1;
+              font-size: 1rem;
+              gap: 1.5rem;
+              padding: 1rem;
+            }
+
+            hr {
+              margin: 1rem 0;
+            }
+
+            li {
+              font-size: 1rem;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
