@@ -91,9 +91,56 @@ const Portfolio = () => {
                 backdropFilter: "blur(10px)",
                 border: "2px solid white",
                 marginBottom: "20px", // Add margin between cards
-                flex: "15%", // Set each card to take up 25% of the container width
+                flex: "20%", // Set each card to take up 25% of the container width
+                // padding: "20%",
               }}
             >
+              <style>
+        {`
+        @media (max-width: 768px) {
+          .box {
+            // width: 100%;
+            // padding: 4rem;
+            margin: 10%;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border: 2px solid white;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            justify-content: center;
+          }
+
+          h2 {
+            font-size: 3rem;
+            color: white;
+            margin:2rem;
+            padding: 1rem;
+          }
+
+          p.large {
+            font-size: 1.5rem;
+            color: whitesmoke;
+          }
+
+          ul {
+            columns: 2;
+            font-size: 1.25rem;
+            margin: 0;
+            gap: 3rem;
+            padding: 2rem;
+            border-radius: 5px;
+            padding: 1rem;
+            list-style: none;
+          }
+        
+        }`}
+      </style>
+              
               <a
                 href={project.url}
                 target="_blank"
