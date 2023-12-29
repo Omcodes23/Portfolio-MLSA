@@ -104,7 +104,8 @@ const Portfolio = () => {
                   style={{
                     flexBasis: "40px",
                     color: "white",
-                    marginBottom: "10px", // Add margin below title
+                    marginBottom: "5%", // Add margin below title
+                    marginTop: "5%", // Add margin above title
                   }}
                 >
                   {project.title}
@@ -122,7 +123,7 @@ const Portfolio = () => {
                 alt={project.title}
                 style={{
                   width: "100%",
-                  height: "50%",
+                  height: "100%",
                   borderRadius: "0%",
                   border: "2px solid white",
                 }}
