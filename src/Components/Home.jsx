@@ -64,7 +64,7 @@ const Home = ({ name }) => {
           }
 
           h1 {
-            font-size: 4rem; /* Adjust the font size for h1 on smaller screens */
+            font-size: 3rem; /* Adjust the font size for h1 on smaller screens */
           }
 
           h2 {
